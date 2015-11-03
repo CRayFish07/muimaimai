@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <style>
+    	body{
+    		background-color: #fff;
+    	}
+    	.mui-bar .mui-segmented-control{
+    		border: none;
+    		color: #fff;
+    	}
+    	.mui-segmented-control .mui-control-item{
+    		border-left: none;
+    		color: #fff!important;
+  			border-color: none;
+    	}
+    	.mui-segmented-control .mui-control-item.mui-active{
+    		border-bottom: 1px solid #fff;
+    	}
+    	.mui-segmented-control .mui-icon.mui-active{
+    		border: none;
+    	}
+    	.mui-bar-nav~.mui-content {
+		  padding-top: 30px;
+		}
+    	.mui-bar-nav.mui-bar {
+    		background-color: #007aff;
+    	}
+    	.mui-bar-nav.mui-bar .mui-icon{
+    		padding: 0;
+    	}
+    	b{
+    		font-size: 12px;
+    		font-weight: 100;
+    		color: #8f8f94;
+    	}
+    	.mui-ellipsis{
+    		font-size: 12px;
+    	}
+    	.mui-bar-nav~.mui-content {
+		  	padding-top: 36px;
+		}
+		.mui-icon-listbr{
+			float: right;
+		}
+		.mui-icon .mui-badge2{
+			padding: 1px 3px;
+		}
+		.mui-badge3{
+			color: #FF9933; 
+			font-size: 8px;
+		}
+		.mui-grid-view.mui-grid-9{
+			background-color: #FFFFFF;
+		}
+		.mui-search .mui-placeholder{
+			line-height: 40px;
+		}
+		#Gallery{
+			  margin-top: 15px;
+		}
+		.mui-grid-view.mui-grid-9 .mui-media{
+			color: #007AFF;
+		}
+		.mui-bg-grey{
+			background-color: rgba(0,0,0,.1);
+		}
+		.mui-list-flright{
+			float: right; padding-right: 15px;
+		}
+		.mui-icon-fs{
+			font-size: 25px;
+			color: #007AFF;
+		}
+		.mui-my-list{
+			color: #000;
+			padding-left: 10px;
+			font-size: 15px;
+		}
+		.mui-list-wf{
+			float: left; width: 45%;text-align: center;
+		}
+		.mui-list-wf a{
+			color: #000000;
+		}
+		.mui-rightnote{
+			float: right;  line-height: 42px;max-width: 42px; height: 42px;
+		}
+		p{
+			  white-space: normal;
+		}
+    </style>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+</head>
+<body>
+	<!--header nav-->
+	<header class="mui-bar mui-bar-nav"  style="height: 60px; line-height: 60px;">
+			<div id="segmentedControl" class="mui-segmented-control"  style="display: block;"> 
+				<a class="mui-control-item mui-icon mui-icon-search" href="listpage/search.html"></a>
+				<a class="mui-control-item mui-active" href="#tabbar">实名动态
+					<span class="mui-icon mui-badge" style="background-color: #FF9933; width: 5px;height: 5px;  margin-bottom: 9px; margin-left: -5px;"></span>
+				</a>
+				<a class="mui-control-item" href="#item2">匿名八卦</a>
+				<a class="mui-control-item mui-icon mui-icon-chat" href=""></a>
+			</div>
+			<div id="mes" class=""  style="display: none;"> 
+				<a class="mui-icon-list mui-icon mui-icon-left-nav mui-pull-left" style="line-height: 60px;  color: #fff; padding-left: 15px;"></a>
+				<a class="mui-icon-plusempty mui-icon mui-icon-lright-nav mui-pull-right" style="line-height: 60px;  color: #fff; padding-right: 15px;"></a>
+				<h1 class="mui-title" style="line-height: 60px;  color: #fff;">消息</h1>
+			</div>
+			<div id="con" class=""  style="display: none;"> 
+				<a class="mui-icon-plusempty mui-icon mui-icon-lright-nav mui-pull-right" style="line-height: 60px;  color: #fff; padding-right: 15px;"></a>
+				<h1 class="mui-title" style="line-height: 60px;  color: #fff;">人脉办事</h1>
+			</div>
+			<div id="my" class=""  style="display: none;"> 
+				<h1 class="mui-title" style="line-height: 60px;  color: #fff;">我</h1>
+			</div>
+	</header>
+	<!--footer nav-->
+	<nav class="mui-bar mui-bar-tab" style="">
+			<a class="mui-tab-item mui-active" href="#tabbar">
+				<span class="mui-icon mui-icon-home"><span class="mui-badge" style="background-color: #FF9933; padding: 3px 3px;margin-left: 0px;  top: 2px;"></span></span>
+				<span class="mui-tab-label">工作圈</span>
+			</a>
+			<a class="mui-tab-item" href="#tabbar-with-chat">
+				<span class="mui-icon mui-icon-chatbubble"></span>
+				<span class="mui-tab-label">消息</span>
+			</a>
+			<a class="mui-tab-item" href="#tabbar-with-contact">
+				<span class="mui-icon mui-icon-person"></span>
+				<span class="mui-tab-label">人脉办事</span>
+			</a>
+			<a class="mui-tab-item" href="#tabbar-with-map">
+				<span class="mui-icon mui-icon-contact"></span>
+				<span class="mui-tab-label">我</span>
+			</a>
+		</nav>
+	<div class="mui-content" style="margin-top: 25px; background-color: #fff;">
+		<!--bagua-->
+			<div id="item2" class="mui-control-content">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a href="listpage/gossipdetails.html">
+						听说你去百度了，百度工程师加班你造吗？听说你去百度了，百度工程师加班你造吗？
+						<div style="padding-top: 5px;"> 
+							<b>好友的好友</b>
+							<b class="mui-icon-listbr">
+								<span class="mui-icon mui-icon-plusempty"></span>
+								<span class="mui-icon mui-icon-camera"></span>
+								<span class="mui-icon mui-icon-redo"></span>
+							</b>
+						</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="listpage/gossipdetails.html">
+						据外媒报道，谷歌将收购移动应用开发平台Divshot？
+						<div style="padding-top: 5px;"> 
+							<b>好友的好友</b>
+							<b class="mui-icon-listbr">
+								<span class="mui-icon mui-icon-plusempty"></span>
+								<span class="mui-icon mui-icon-camera"></span>
+								<span class="mui-icon mui-icon-redo"></span>
+							</b>
+						</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="listpage/gossipdetails.html">
+						当所谓“Google 重返中国”的消息越传越凶的时候，谷歌中国对虎嗅的求证，做了上述表态。那么
+						<div style="padding-top: 5px;"> 
+							<b>好友的好友</b>
+							<b class="mui-icon-listbr">
+								<span class="mui-icon mui-icon-plusempty"></span>
+								<span class="mui-icon mui-icon-camera"></span>
+								<span class="mui-icon mui-icon-redo"></span>
+							</b>
+						</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!--job-->
+		 	<div id="tabbar" class="mui-control-content mui-active">						
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell mui-media">
+							<a class="" href="listpage/dynamicdetails.html">
+								<img class="mui-media-object mui-pull-left" src="images/avatar_yunwei.png">
+								<div class="mui-media-body">
+									CBD <b>| 百度IOS开发</b><b class="mui-badge3">V</b>
+									<p class='mui-ellipsis'>北京 开发 好友的好友</p>
+								</div>
+								<div class="" style="padding-left: 52px; padding-top:5px;">
+									<p style="width:100%; word-wrap:break-word;">前端开发要学习哪些知识呢？马上毕业前端开发要学习哪些知识呢？</p>
+								</div>
+								<div class="" style="padding-top:5px; float: right;">
+									<b>
+										<span class="mui-icon mui-icon-plusempty"></span>
+										<span class="mui-icon mui-icon-camera"></span>
+										<span class="mui-icon mui-icon-redo"></span>
+									</b>
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media">
+							<a class="" href="listpage/dynamicdetails.html">
+								<img class="mui-media-object mui-pull-left" src="images/no_result_icon.png">
+								<div class="mui-media-body">
+									远眺  <b>| 阿里开发</b>
+									<p class='mui-ellipsis'>上海 开发</p>
+								</div>
+								<div class="" style="padding-left: 52px; padding-top:5px;">
+									<p style="width:100%; word-wrap:break-word;">前端开发要学习哪些知识呢？马上毕业前端开发要学习哪些知识呢？</p>
+								</div>
+								<div class="" style="padding-top:5px; float: right;">
+									<b>
+										<span class="mui-icon mui-icon-plusempty"></span>
+										<span class="mui-icon mui-icon-camera"></span>
+										<span class="mui-icon mui-icon-redo"></span>
+									</b>
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media">
+							<a class="" href="listpage/dynamicdetails.html">
+								<img class="mui-media-object mui-pull-left" src="images/avatar_yunwei.png">
+								<div class="mui-media-body">
+									幸福  <b>| 腾讯开发</b><b class="mui-badge3">V</b>
+									<p class='mui-ellipsis'>开发</p>
+								</div>
+								<div class="" style="padding-left: 52px; padding-top:5px;">
+									<p style="width:100%; word-wrap:break-word;">前端开发要学习哪些知识呢？马上毕业前端开发要学习哪些知识呢？</p>
+								</div>
+								<div class="" style="padding-top:5px; float: right;">
+									<b>
+										<span class="mui-icon mui-icon-plusempty"></span>
+										<span class="mui-icon mui-icon-camera"></span>
+										<span class="mui-icon mui-icon-redo"></span>
+									</b>
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media">
+							<a class="" href="listpage/dynamicdetails.html">
+								<img class="mui-media-object mui-pull-left" src="images/avatar_yunwei.png">
+								<div class="mui-media-body">
+									CBD <b>| 百度IOS开发</b>
+									<p class='mui-ellipsis'>北京 开发 好友的好友</p>
+								</div>
+								<div class="" style="padding-left: 52px; padding-top:5px;">
+									<p style="width:100%; word-wrap:break-word;">前端开发要学习哪些知识呢？马上毕业</p>
+								</div>
+								<div class="" style="padding-top:5px; float: right;">
+									<b>
+										<span class="mui-icon mui-icon-plusempty"></span>
+										<span class="mui-icon mui-icon-camera"></span>
+										<span class="mui-icon mui-icon-redo"></span>
+									</b>
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media">
+							<a class="" href="listpage/dynamicdetails.html">
+								<img class="mui-media-object mui-pull-left" src="images/no_result_icon.png">
+								<div class="mui-media-body">
+									远眺  <b>| 阿里开发</b>
+									<p class='mui-ellipsis'>上海 开发</p>
+								</div>
+								<div class="" style="padding-left: 52px; padding-top:5px;">
+									<p style="width:100%; word-wrap:break-word;">前端开发要学习哪些知识呢？马上毕业</p>
+								</div>
+								<div class="" style="padding-top:5px; float: right;">
+									<span class="mui-icon mui-icon-plusempty"></span>
+									<span class="mui-icon mui-icon-camera"></span>
+									<span class="mui-icon mui-icon-redo"></span>
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media">
+							<a class="" href="javascript:;">
+								<img class="mui-media-object mui-pull-left" src="images/avatar_yunwei.png">
+								<div class="mui-media-body">
+									CBD <b>| 百度IOS开发</b>
+									<p class='mui-ellipsis'>北京 开发 好友的好友</p>
+								</div>
+								<div class="" style="padding-left: 52px; padding-top:5px;">
+									<p style="width:100%; word-wrap:break-word;">前端开发要学习哪些知识呢？马上毕业</p>
+								</div>
+								<div class="" style="padding-top:5px; float: right;">
+									<span class="mui-icon mui-icon-plusempty"></span>
+									<span class="mui-icon mui-icon-camera"></span>
+									<span class="mui-icon mui-icon-redo"></span>
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media">
+							<a class="" href="listpage/dynamicdetails.html">
+								<img class="mui-media-object mui-pull-left" src="images/no_result_icon.png">
+								<div class="mui-media-body">
+									远眺  <b>| 阿里开发</b>
+									<p class='mui-ellipsis'>上海 开发</p>
+								</div>
+								<div class="" style="padding-left: 52px; padding-top:5px;">
+									<p style="width:100%; word-wrap:break-word;">前端开发要学习哪些知识呢？马上毕业</p>
+								</div>
+								<div class="" style="padding-top:5px; float: right;">
+									<span class="mui-icon mui-icon-plusempty"></span>
+									<span class="mui-icon mui-icon-camera"></span>
+									<span class="mui-icon mui-icon-redo"></span>
+								</div>
+							</a>
+						</li>
+					</ul>
+			</div>
+			<!--messages-->
+			<div id="tabbar-with-chat" class="mui-control-content">		
+				<div class="mui-input-row mui-search mui-bg-grey">
+					<input type="search" class="mui-input-clear" placeholder="搜索" style="margin: 5px; height: 28px; line-height: 28px; width: 97%; background-color: #fff;">
+				</div>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell mui-media mui-bg-grey">
+						<a class="" href="listpage/im-chat.html">
+							<img class="mui-media-object mui-pull-left" src="images/avatar_yunwei.png">
+							<div class="mui-rightnote">
+								<b>09:42</b>
+							</div>
+							<div class="mui-media-body" style="padding-right: 20px;">
+								待处理事项
+								<p class='mui-ellipsis'>个人资料待完善</p>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media mui-bg-grey">
+						<a class="" href="listpage/im-chat.html">
+							<img class="mui-media-object mui-pull-left" src="images/avatar_yunwei.png">
+							<div class="mui-rightnote">
+								<b>昨天</b>
+							</div>
+							<div class="mui-media-body">
+								招聘小助手 <b>| 脉脉官方帐号</b><b class="mui-badge3">V</b>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a class="" href="listpage/im-chat.html">
+							<img class="mui-media-object mui-pull-left" src="images/avatar_yunwei.png">
+							<div class="mui-rightnote">
+								<b>昨天</b>
+							</div>
+							<div class="mui-media-body">
+								红包小助手  <b>| 脉脉官方帐号</b><b class="mui-badge3">V</b>
+								<p class='mui-ellipsis'>你已收到设计送出的红包2.28元，点击查看余额。</p>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a class="" href="listpage/im-chat.html">
+							<img class="mui-media-object mui-pull-left" src="images/no_result_icon.png">
+							<div class="mui-rightnote">
+							<b>昨天</b>
+							</div>
+							<div class="mui-media-body">
+								阿斯  <b>| 东方开发</b><b class="mui-badge3">V</b>
+								<p class='mui-ellipsis'>我已通过了你的好友请求。现在我们是初试好友（LV1）</p>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a class="" href="listpage/im-chat.html">
+							<img class="mui-media-object mui-pull-left" src="images/no_result_icon.png">
+							<div class="mui-rightnote">
+							<b>昨天</b>
+							</div>
+							<div class="mui-media-body">
+								阿小  <b>| 发光开发</b>
+								<p class='mui-ellipsis'>[互动助手]</p>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a class="" href="listpage/im-chat.html">
+							<img class="mui-media-object mui-pull-left" src="images/avatar_yunwei.png">
+							<div class="mui-rightnote">
+							<b>昨天</b>
+							</div>
+							<div class="mui-media-body">
+								大神  <b>| 按时开发</b><b class="mui-badge3">V</b>
+								<p class='mui-ellipsis'>[互动助手]</p>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a class="" href="listpage/im-chat.html">
+							<img class="mui-media-object mui-pull-left" src="images/no_result_icon.png">
+							<div class="mui-rightnote">
+								<b>昨天</b>
+							</div>
+							<div class="mui-media-body">
+								阿斯  <b>| 东方开发</b><b class="mui-badge3">V</b>
+								<p class='mui-ellipsis'>我已通过了你的好友请求。现在我们是初试好友（LV1）</p>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a class="" href="listpage/im-chat.html">
+							<img class="mui-media-object mui-pull-left" src="images/no_result_icon.png">
+							<div class="mui-rightnote">
+								<b>昨天</b>
+							</div>
+							<div class="mui-media-body">
+								阿小  <b>| 发光开发</b>
+								<p class='mui-ellipsis'>[互动助手]</p>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!--my -->
+			<div id="tabbar-with-map" class="mui-control-content">
+				<ul class="mui-table-view mui-table-view-chevron">
+					<li class="mui-table-view-cell mui-media">
+						<a class="mui-navigate-right" href="listpage/myinformation.html">
+							<img class="mui-media-object mui-pull-left" src="images/avatar_yunwei.png">
+							<div class="mui-media-body">
+								金丝鸟 <b>| 百度IOS开发</b><b class="mui-badge3">V</b>
+								<p class='mui-ellipsis'>脉脉号：maixiaomai</p>
+							</div>
+						</a>
+					</li>	
+				</ul>
+				<ul class="mui-table-view mui-table-view-chevron">
+					<li class="mui-media" style="height: 35px;line-height: 35px;">
+							<div class="mui-media-body">
+								<div class="mui-list-wf" style="width: 100%;">
+									<div class="mui-list-wf" style=""><a href="listpage/myinformation.html">编辑资料</a></div>
+									<div class="" style="width: 10%;float: left;">|</div>
+									<div class="mui-list-wf" style=""><a href="listpage/privacypolicy.html">隐私策略</a></div> 
+								</div>
+							</div>
+					</li>
+				</ul>
+				<ul class="mui-table-view mui-table-view-chevron" style="margin-top: 25px; color: #007AFF;">
+					<li class="mui-table-view-cell mui-media">
+						<a class="mui-navigate-right mui-icon mui-icon-contact mui-icon-fs" href="listpage/mycircle.html">
+							<b class="mui-my-list">我的工作圈</b>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a class="mui-navigate-right mui-icon mui-icon-starhalf mui-icon-fs" href="listpage/mycollection.html">
+							<b class="mui-my-list">我的收藏</b>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a class="mui-navigate-right mui-icon mui-icon-minus mui-icon-fs" href="listpage/mywallet.html">
+							<b class="mui-my-list">我的钱包</b>
+						</a>
+					</li>
+				</ul>
+				<ul class="mui-table-view mui-table-view-chevron" style="margin-top: 25px; color: #007AFF;">
+					<li class="mui-table-view-cell mui-media">
+						<a class="mui-navigate-right mui-icon mui-icon-info mui-icon-fs" href="listpage/accountinfo.html">
+							<b class="mui-my-list">帐号信息</b>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a class="mui-navigate-right mui-icon mui-icon-camera mui-icon-fs">
+							<b class="mui-my-list">成为认证用户</b>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a class="mui-navigate-right mui-icon mui-icon-list mui-icon-fs">
+							<b class="mui-my-list">更新通讯录到脉脉</b>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a class="mui-navigate-right mui-icon mui-icon-settings mui-icon-fs" href="listpage/management.html">
+							<b class="mui-my-list">人脉经营宝典</b>
+						</a>
+					</li>
+				</ul>
+				
+				<ul class="mui-table-view mui-table-view-chevron" style="margin-top: 25px; color: #007AFF;">
+					<li class="mui-table-view-cell mui-media">
+						<a class="mui-navigate-right mui-icon mui-icon-gear mui-icon-fs" href="listpage/setting.html">
+							<b class="mui-my-list">设置</b>
+						</a>
+					</li>
+				</ul>
+
+			</div>
+			<!--renmai-->
+			<div id="tabbar-with-contact" class="mui-control-content">
+				<div class="mui-input-row mui-search mui-bg-grey">
+					<input type="search" class="mui-input-clear" placeholder="搜索" style="margin: 5px; height: 28px; line-height: 28px; width: 97%; background-color: #fff;">
+				</div>
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right" href="listpage/myfriends.html">
+								我的好友<b>（100）</b>
+							</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right" href="listpage/findfriends.html">
+								发现人脉<b>（10000+）<i style="float: right; padding-right: 15px;">同事、校友、同乡...</i></b>
+							</a>
+						</li>
+					</ul>
+					<!--jiugongge-->
+					<div id="Gallery" class="mui-slider">
+						<ul class="mui-table-view mui-grid-view mui-grid-9">
+							<li class="mui-table-view-cell mui-media mui-col-xs-4">
+								<a href="#">
+									<span class="mui-icon mui-icon-locked"><span class="mui-badge mui-badge2">热招</span></span>
+									<div class="mui-media-body">
+										职位广场
+									</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4">
+								<a href="listpage/looktalent.html">
+									<span class="mui-icon mui-icon-personadd"></span>
+									<div class="mui-media-body">
+										找人才
+									</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4">
+								<a href="#">
+									<span class="mui-icon mui-icon-home"><span class="mui-badge mui-badge2">热门</span></span>
+									<div class="mui-media-body">
+										聚会活动
+									</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4">
+								<a href="#">
+									<span class="mui-icon mui-icon-spinner"></span>
+									<div class="mui-media-body">
+										找投资
+									</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4">
+								<a href="#">
+									<span class="mui-icon mui-icon-refresh"></span>
+									<div class="mui-media-body">
+										找外包
+									</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4">
+								<a href="#">
+									<span class="mui-icon mui-icon-help"></span>
+									<div class="mui-media-body">
+										创业服务
+									</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4">
+								<a href="#">
+									<span class="mui-icon mui-icon-star"></span>
+									<div class="mui-media-body">
+										职场导师
+									</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4">
+								<a href="#">
+									<span class="mui-icon mui-icon-paperclip"></span>
+									<div class="mui-media-body">
+										营销策划
+									</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4">
+								<a href="#">
+									<span class="mui-icon mui-icon-videocam"></span>
+									<div class="mui-media-body">
+										媒介采购
+									</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4">
+								<a href="#">
+									<span class="mui-icon mui-icon-chatboxes"></span>
+									<div class="mui-media-body">
+										短信通道
+									</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4">
+								<a href="#">
+									<span class="mui-icon mui-icon-mic"></span>
+									<div class="mui-media-body">
+										找律师
+									</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4">
+								<a href="#">
+									<span class="mui-icon mui-icon-person"></span>
+									<div class="mui-media-body">
+										找单身
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>				
+			</div>
+	</div>
+		<script src="js/mui.min.js"></script>
+		<script>
+			mui.init({
+				swipeBack:true //启用右滑关闭功能
+			});
+			(function($) {
+				$('#scroll').scroll({
+					indicators: true //是否显示滚动条
+				});
+				var segmentedControl = document.getElementById('segmentedControl');
+				$('.mui-input-group').on('change', 'input', function() {
+					if (this.checked) {
+						var styleEl = document.querySelector('input[name="style"]:checked');
+						var colorEl = document.querySelector('input[name="color"]:checked');
+						if (styleEl && colorEl) {
+							var style = styleEl.value;
+							var color = colorEl.value;
+							segmentedControl.className = 'mui-segmented-control' + (style ? (' mui-segmented-control-' + style) : '') + ' mui-segmented-control-' + color;
+						}
+					}
+				});
+			})(mui);
+		</script>
+		<script>
+			$("#tabbar-with-chat").click(function() {
+				$('#segmentedControl').style.display="none";
+			});
+		</script>
+</body>
+</html>

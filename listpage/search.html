@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>搜索</title>
+    <script src="../js/mui.min.js"></script>
+    <link href="../css/mui.min.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+    <style>
+        body,.mui-content,.mui-grid-view.mui-grid-9{
+    		background-color: #fff;
+    		color: #c8c7cc;
+    	}
+    	.mui-bar-nav.mui-bar {
+		  background-color: #007aff;
+		}
+		.mui-bar-nav.mui-bar .mui-action-back{
+			color: #fff;
+		}
+		.mui-search .mui-placeholder .mui-icon{
+			color: #007aff;
+			float: left;
+			padding-left: 15px;
+		}
+		.mui-grid-view.mui-grid-9 .mui-media{
+		  color: #007AFF;
+		}
+		.mui-btn{
+			color: #c8c7cc;
+			margin: 1px;
+		}
+
+    </style>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<a id="a" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="float: none;" href="javascript:history.back(-1)"></a>
+		<div class="mui-input-row mui-search" style="margin-left: 35px;  margin-top: -41px;">
+			<input type="search" class="mui-input-clear" placeholder="" style=" height: 28px; line-height: 28px; width: 98%; background-color: #fff;">
+		</div>
+	</header>
+	<div class="mui-content">
+		<div style="padding: 10px 10px;">
+			<div id="segmentedControl" class="mui-segmented-control">
+				<a class="mui-control-item mui-active" href="#item1">
+				找人
+				</a>
+				<a class="mui-control-item" href="#item2">
+				动态
+				</a>
+				<a class="mui-control-item" href="#item3">
+				八卦
+				</a>				
+				<a class="mui-control-item" href="#item4">
+				职位
+				</a>
+			</div>
+		</div>
+		<div>
+			<div id="item1" class="mui-control-content mui-active">
+				<div style="padding: 5px 16px; font-size: 12px;">您可以从以下类别中选择帮助您的人  <a href="">申请加入</a></div>
+				<div id="scroll" class="">
+					<div class="mui-scroll">
+						<ul class="mui-table-view mui-grid-view mui-grid-9">
+				            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+				                    <span class="mui-icon mui-icon-spinner"></span>
+									<div class="mui-media-body">
+										找投资
+									</div></a></li>
+				            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+				                   <span class="mui-icon mui-icon-personadd"></span>
+									<div class="mui-media-body">
+										找人才
+									</div></a></li>
+				            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+				                   	<span class="mui-icon mui-icon-refresh"></span>
+									<div class="mui-media-body">
+										找外包
+									</div></a></li>
+				            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+				                    <span class="mui-icon mui-icon-help"></span>
+									<div class="mui-media-body">
+										创业服务
+									</div></a></li>
+				            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+				                    <span class="mui-icon mui-icon-star"></span>
+									<div class="mui-media-body">
+										职场导师
+									</div></a></li>
+				            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+				                    <span class="mui-icon mui-icon-paperclip"></span>
+									<div class="mui-media-body">
+										营销策划
+									</div></a></li>
+				            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+				                    <span class="mui-icon mui-icon-videocam"></span>
+									<div class="mui-media-body">
+										媒介采购
+									</div></a></li>
+				            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+				                    <span class="mui-icon mui-icon-chatboxes"></span>
+									<div class="mui-media-body">
+										短信通道
+									</div></a></li>
+				           	<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+				                    <span class="mui-icon mui-icon-mic"></span>
+									<div class="mui-media-body">
+										找律师
+									</div></a></li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+				                    <span class="mui-icon mui-icon-person"></span>
+									<div class="mui-media-body">
+										找单身
+									</div></a></li>
+				        </ul> 
+					</div>
+				</div>
+			</div>
+			<div id="item2" class="mui-control-content">
+				<div style="padding: 5px 16px;">热门动态关键词</div>
+				<div style="  padding: 5px;">
+					<button type="button" class="mui-btn mui-btn-outlined">
+					百度
+					</button>
+					<button type="button" class="mui-btn mui-btn-outlined">
+					滴滴
+					</button>
+					<button type="button" class="mui-btn mui-btn-outlined">
+					美团
+					</button>
+					<button type="button" class="mui-btn mui-btn-outlined">
+					坚果
+					</button>
+					<button type="button" class="mui-btn mui-btn-outlined">
+					奇酷
+					</button>
+					<button type="button" class="mui-btn mui-btn-outlined">
+					去哪儿
+					</button>
+					<button type="button" class="mui-btn mui-btn-outlined">
+					京东
+					</button>
+					<button type="button" class="mui-btn mui-btn-outlined">
+					360
+					</button>
+					<button type="button" class="mui-btn mui-btn-outlined">
+					网易
+					</button>
+					<button type="button" class="mui-btn mui-btn-outlined">
+					乐视
+					</button>
+					<button type="button" class="mui-btn mui-btn-outlined">
+					58到家
+					</button>
+					<button type="button" class="mui-btn mui-btn-outlined">
+					投资
+					</button>
+					<button type="button" class="mui-btn mui-btn-outlined">
+					创业
+					</button>
+					<button type="button" class="mui-btn mui-btn-outlined">
+					o2o
+					</button>
+					<button type="button" class="mui-btn mui-btn-outlined">
+					社交
+					</button>
+				</div>
+			</div>
+			<div id="item3" class="mui-control-content">
+				<div style="padding: 5px 16px;">热门词</div>
+				<div style="  padding: 5px;">
+					<button type="button" class="mui-btn mui-btn-outlined">
+					去哪儿
+					</button>
+					<button type="button" class="mui-btn mui-btn-outlined">
+					百度冻结hc
+					</button>
+					<button type="button" class="mui-btn mui-btn-outlined">
+					李明远离职
+					</button>
+					<button type="button" class="mui-btn mui-btn-outlined">
+					美团点评
+					</button>
+					<button type="button" class="mui-btn mui-btn-outlined">
+					12306
+					</button>
+					<button type="button" class="mui-btn mui-btn-outlined">
+					小道消息
+					</button>
+					<button type="button" class="mui-btn mui-btn-outlined">
+					神回复
+					</button>
+					<button type="button" class="mui-btn mui-btn-outlined">
+					裁员
+					</button>
+					<button type="button" class="mui-btn mui-btn-outlined">
+					今日最热评论
+					</button>
+					<button type="button" class="mui-btn mui-btn-outlined">
+					一句话证明
+					</button>
+				</div>
+				<div style="padding: 5px 16px;">热门词</div>
+				<div style="  padding: 5px;">
+					<button type="button" class="mui-btn mui-btn-outlined">
+					移动开发
+					</button>
+				</div>
+			</div>			
+			<div id="item4" class="mui-control-content">
+				<!--<div style="padding: 5px 16px;">热搜职位<span style="float: right;">IT互联网∨</span></div>-->
+				
+				<div id="h5" class="mui-col-xs-3">
+				<div id="segmentedControls" class="mui-segmented-control mui-segmented-control-inverted mui-segmented-control-vertical">
+				</div>
+			</div>
+			<div id="segmentedControlContents" class="mui-col-xs-9" style="border-left: 1px solid #c8c7cc;">
+				<div id="item1" class="mui-control-content mui-active">
+				</div>
+				<div id="item2" class="mui-control-content">
+				</div>
+				<div id="item3" class="mui-control-content">
+				</div>
+			</div>
+				
+			</div>
+		</div>
+	</div>	
+	<script src="../js/mui.min.js"></script>
+	<script>
+				mui.init({
+				swipeBack: true //启用右滑关闭功能
+			});
+			var controls = document.getElementById("segmentedControls");
+			var contents = document.getElementById("segmentedControlContents");
+			var html = [];
+			var i = 1,
+				j = 1,
+				m = 16, //左侧选项卡数量+1
+				n = 21; //每个选项卡列表数量+1
+			for (; i < m; i++) {
+				html.push('<a class="mui-control-item" href="#content' + i + '">选项' + i + '</a>');
+			}
+			controls.innerHTML = html.join('');
+			html = [];
+			for (i = 1; i < m; i++) {
+				html.push('<div id="content' + i + '" class="mui-control-content"><ul class="mui-table-view">');
+				for (j = 1; j < n; j++) {
+					html.push('<li class="mui-table-view-cell">第' + i + '个选项卡子项-' + j + '</li>');
+				}
+				html.push('</ul></div>');
+			}
+			contents.innerHTML = html.join('');
+			 //默认选中第一个
+			controls.querySelector('.mui-control-item').classList.add('mui-active');
+			contents.querySelector('.mui-control-content').classList.add('mui-active');
+	</script>
+</body>
+</html>

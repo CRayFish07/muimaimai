@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="../js/mui.min.js"></script>
+    <link href="../css/mui.min.css" rel="stylesheet"/>
+    <style>
+    	body,.mui-content{
+    		background-color: #fff;
+    		font-size: 12px;
+    		color: #000;
+    	}
+    	.mui-moneybg{
+    		background-color: #007aff;
+    		color: #FFFFFF;
+    		text-align: center;
+    	}
+    	.mui-bar-nav.mui-bar {
+		  background-color: #007aff;
+		}
+		.mui-bar-nav.mui-bar h1{
+			color: #fff;
+		}
+		.mui-bar-nav.mui-bar .mui-action-back{
+			color: #fff;
+		}
+		.mui-content .mui-table-view:first-child {
+		  margin-top: 0px;
+		}
+		.mui-btn{
+			background-color:#0066FF;
+			width: 80px;
+			line-height: 15px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+    </style>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" href="javascript:history.back(-1)"></a>
+		<a class="mui-icon-more mui-icon mui-icon-lright-nav mui-pull-right" style=" color: #fff; padding-right: 15px;"></a>
+		<h1 class="mui-title">我的钱包</h1>
+	</header>
+	<div class="mui-content">
+		<div class="mui-moneybg">
+			<p style="padding-top: 15px;color: #FFFFFF;padding: 10px;">余额（元）</p>
+			<b style="font-size: 36px;">99.99</b>
+			<div id="">
+				<button type="button" class="mui-btn mui-btn-primary">提醒</button><button type="button" class="mui-btn mui-btn-primary">银行卡</button>
+			</div>
+		</div>
+		<ul class="mui-table-view">
+			<li class="mui-table-view-cell mui-media">
+				<a class="" href="javascript:;">
+					<div class="mui-media-body">
+						<p style="color: #000000;">红包收入<span style="white-space:normal; color:#007aff;float:right;">3.00元</p>
+					</div>
+					<div class="" style="padding-top:5px;">
+						<p style="white-space:normal;font-size: 8px;">交易成功<span class="" style="float:right;">2015-10-30 10:20:10</span></p>
+					</div>
+				</a>
+			</li>
+			<li class="mui-table-view-cell mui-media">
+				<a class="" href="javascript:;">
+					<div class="mui-media-body">
+						<p style="color: #000000;">红包收入<span style="white-space:normal; color:#007aff;float:right;">3.00元</p>
+					</div>
+					<div class="" style="padding-top:5px;">
+						<p style="white-space:normal;font-size: 8px;">交易成功<span class="" style="float:right;">2015-10-30 10:20:10</span></p>
+					</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

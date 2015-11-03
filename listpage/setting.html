@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="../js/mui.min.js"></script>
+    <link href="../css/mui.min.css" rel="stylesheet"/>
+    <style>
+    	body,.mui-content{
+    		background-color: #fff;
+    	}
+    	.mui-badge-setting{
+    		background-color: #FFFFFF;
+    		color: #007AFF;;
+    	}
+    	.mui-table-listtop{
+    		margin-top: 25px;
+    	}
+    </style>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+</head>
+<body>
+	<!--header nav-->
+	<header class="mui-bar mui-bar-nav"  style="height: 60px; line-height: 60px;">
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="line-height: 40px;" href="javascript:history.back(-1)"></a>
+		<h1 class="mui-title" style="line-height: 60px;">更多设置</h1>
+	</header>
+	<!--content-->
+    <div class="mui-content" style="">
+    	<!--页面主内容区开始-->
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell">
+                <a class="mui-navigate-right">
+                    <span class="mui-badge mui-badge-setting">云中鹤（花名）</span>
+                    	我的匿名信息
+                </a>
+            </li>
+            <li class="mui-table-view-cell">
+                <a class="mui-navigate-right">
+                    <span class="mui-badge mui-badge-setting">有一次摇一摇机会</span>
+                    	摇一摇换花名
+                </a>
+            </li>
+        </ul>
+       <ul class="mui-table-view mui-table-listtop">
+            <li class="mui-table-view-cell">
+                <a class="mui-navigate-right">
+                    	新消息通知
+                </a>
+            </li>
+            <li class="mui-table-view-cell">
+                <a class="mui-navigate-right">
+                    	清理缓存
+                </a>
+            </li>            
+            <li class="mui-table-view-cell">
+                <a class="mui-navigate-right">
+                	<span class="mui-badge mui-badge-setting">中</span>
+                    	字体大小
+                </a>
+            </li>
+        </ul>       
+        <ul class="mui-table-view mui-table-listtop">
+            <li class="mui-table-view-cell">
+                <a class="mui-navigate-right">
+                    	关于脉脉
+                </a>
+            </li>
+            <li class="mui-table-view-cell">
+                <a class="mui-navigate-right">
+                    	应用缓存
+                </a>
+            </li>            
+            <li class="mui-table-view-cell">
+                <a class="mui-navigate-right">
+                    	邀请好友加入脉脉
+                </a>
+            </li>
+        </ul>        
+        <ul class="mui-table-view mui-table-listtop">
+            <li class="mui-table-view-cell">
+                <a class="mui-navigate-right">
+                    	退出登录
+                </a>
+            </li>
+        </ul>
+        <!--页面主内容区结束-->
+    </div>
+		<script src="../js/mui.min.js"></script>
+		<script>
+			mui.init({
+				swipeBack:true //启用右滑关闭功能
+			});
+			(function($) {
+				$('#scroll').scroll({
+					indicators: true //是否显示滚动条
+				});
+				var segmentedControl = document.getElementById('segmentedControl');
+				$('.mui-input-group').on('change', 'input', function() {
+					if (this.checked) {
+						var styleEl = document.querySelector('input[name="style"]:checked');
+						var colorEl = document.querySelector('input[name="color"]:checked');
+						if (styleEl && colorEl) {
+							var style = styleEl.value;
+							var color = colorEl.value;
+							segmentedControl.className = 'mui-segmented-control' + (style ? (' mui-segmented-control-' + style) : '') + ' mui-segmented-control-' + color;
+						}
+					}
+				});
+			})(mui);
+		</script>
+</body>
+</html>

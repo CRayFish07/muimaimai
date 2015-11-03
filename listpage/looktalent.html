@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>找人才</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<style>
+		    body,.mui-content{
+	    		background-color: #fff;
+	    		font-size: 14px;
+	    		color: #000;
+	    	}
+	    	.mui-bar-nav.mui-bar {
+			  background-color: #007aff;
+			}
+			.mui-bar-nav.mui-bar h1{
+				color: #fff;
+			}
+			.mui-bar-nav.mui-bar .mui-action-back{
+				color: #fff;
+			}
+			.mui-row.mui-fullscreen>[class*="mui-col-"] {
+				height: 100%;
+			}
+			.mui-col-xs-3,
+			.mui-control-content {
+				overflow-y: auto;
+				height: 100%;
+			}
+			.mui-segmented-control .mui-control-item {
+				line-height: 50px;
+				width: 100%;
+			}
+			.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+				background-color: #fff;
+			}
+			.mui-btn{
+				margin: 5px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" href="javascript:history.back(-1)"></a>
+			<a class="mui-icon-more mui-icon mui-icon-lright-nav mui-pull-right" style=" color: #fff; padding-right: 15px;"></a>
+			<h1 class="mui-title">找人才</h1>
+		</header>
+		<div class="mui-content mui-row mui-fullscreen">
+			<div>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right" href="" style="color: #007aff;">
+							热搜人才关键字：<b style="float: right; padding-right: 15px;font-size: 12px; color: #000000;">行业：IT互联网</b>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="mui-col-xs-3">
+				<div id="segmentedControls" class="mui-segmented-control mui-segmented-control-inverted mui-segmented-control-vertical">
+				</div>
+			</div>
+			<div id="segmentedControlContents" class="mui-col-xs-9" style="border-left: 1px solid #c8c7cc;">
+				<div id="item1" class="mui-control-content mui-active">
+				</div>
+				<div id="item2" class="mui-control-content">
+				</div>
+				<div id="item3" class="mui-control-content">
+				</div>
+			</div>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script>
+			mui.init({
+				swipeBack: true //启用右滑关闭功能
+			});
+			var controls = document.getElementById("segmentedControls");
+			var contents = document.getElementById("segmentedControlContents");
+			var html = [];
+			var i = 1,
+				j = 1,
+				m = 13, //左侧选项卡数量+1
+				n = 2; //每个选项卡列表数量+1
+			for (; i < m; i++) {
+				html.push('<a class="mui-control-item" href="#content' + i + '">开发'  + '</a>');
+				html.push('<a class="mui-control-item" href="#content' + i + '">销售'  + '</a>');
+				html.push('<a class="mui-control-item" href="#content' + i + '">运营'  + '</a>');
+				html.push('<a class="mui-control-item" href="#content' + i + '">产品'  + '</a>');
+				html.push('<a class="mui-control-item" href="#content' + i + '">市场'  + '</a>');
+				html.push('<a class="mui-control-item" href="#content' + i + '">设计'  + '</a>');
+				html.push('<a class="mui-control-item" href="#content' + i + '">人力'  + '</a>');
+				html.push('<a class="mui-control-item" href="#content' + i + '">运维'  + '</a>');
+				html.push('<a class="mui-control-item" href="#content' + i + '">测试'  + '</a>');
+				html.push('<a class="mui-control-item" href="#content' + i + '">编辑'  + '</a>');
+				html.push('<a class="mui-control-item" href="#content' + i + '">数据'  + '</a>');
+				html.push('<a class="mui-control-item" href="#content' + i + '">游戏'  + '</a>');
+			}
+			controls.innerHTML = html.join('');
+			html = [];
+			for (i = 1; i < m; i++) {
+				html.push('<div id="content' + i + '" class="mui-control-content"><ul class="mui-table-view">');
+				for (j = 1; j < n; j++) {
+					html.push( '<button type="button" class="mui-btn mui-btn-outlined">' + 'java' + '</button>');
+					html.push( '<button type="button" class="mui-btn mui-btn-outlined">' + 'Android' + '</button>');
+					html.push( '<button type="button" class="mui-btn mui-btn-outlined">' + 'JS' + '</button>');
+					html.push( '<button type="button" class="mui-btn mui-btn-outlined">' + 'iOS' + '</button>');
+					html.push( '<button type="button" class="mui-btn mui-btn-outlined">' + 'HTML/CSS' + '</button>');
+					html.push( '<button type="button" class="mui-btn mui-btn-outlined">' + 'PHP' + '</button>');
+					html.push( '<button type="button" class="mui-btn mui-btn-outlined">' + 'HTML5' + '</button>');
+					html.push( '<button type="button" class="mui-btn mui-btn-outlined">' + 'C++' + '</button>');
+					html.push( '<button type="button" class="mui-btn mui-btn-outlined">' + 'Python' + '</button>');
+					html.push( '<button type="button" class="mui-btn mui-btn-outlined">' + '.NET' + '</button>');
+					html.push( '<button type="button" class="mui-btn mui-btn-outlined">' + 'CTO' + '</button>');
+					html.push( '<button type="button" class="mui-btn mui-btn-outlined">' + 'WP' + '</button>');
+				}
+				html.push('</ul></div>');
+				html.push('<div id="content' + i + '" class="mui-control-content"><ul class="mui-table-view">');
+				for (j = 1; j < n; j++) {
+					html.push( '<button type="button" class="mui-btn mui-btn-outlined">' + '111java' + '</button>');
+					html.push( '<button type="button" class="mui-btn mui-btn-outlined">' + 'Android' + '</button>');
+					html.push( '<button type="button" class="mui-btn mui-btn-outlined">' + 'JS' + '</button>');
+					html.push( '<button type="button" class="mui-btn mui-btn-outlined">' + 'iOS' + '</button>');
+					html.push( '<button type="button" class="mui-btn mui-btn-outlined">' + 'HTML/CSS' + '</button>');
+					html.push( '<button type="button" class="mui-btn mui-btn-outlined">' + 'PHP' + '</button>');
+					html.push( '<button type="button" class="mui-btn mui-btn-outlined">' + 'HTML5' + '</button>');
+					html.push( '<button type="button" class="mui-btn mui-btn-outlined">' + 'C++' + '</button>');
+					html.push( '<button type="button" class="mui-btn mui-btn-outlined">' + 'Python' + '</button>');
+					html.push( '<button type="button" class="mui-btn mui-btn-outlined">' + '.NET' + '</button>');
+					html.push( '<button type="button" class="mui-btn mui-btn-outlined">' + 'CTO' + '</button>');
+					html.push( '<button type="button" class="mui-btn mui-btn-outlined">' + 'WP' + '</button>');
+				}
+				html.push('</ul></div>');
+			}
+			
+			contents.innerHTML = html.join('');
+			 //默认选中第一个
+			controls.querySelector('.mui-control-item').classList.add('mui-active');
+			contents.querySelector('.mui-control-content').classList.add('mui-active');
+		</script>
+
+	</body>
+
+</html>
